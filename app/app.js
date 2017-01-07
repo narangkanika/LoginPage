@@ -10,8 +10,8 @@
                 templateUrl: 'app/views/login.html'
             })
             .when('/home', {
-                controller: 'homeController',
-                templateUrl: 'app/views/home.html'
+                controller: 'userHomeController',
+                templateUrl: 'app/views/userHome.html'
             })
 
             .otherwise( { redirectTo: '/' } );
