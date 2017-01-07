@@ -1,7 +1,7 @@
 
 (function() {
 
-  angular.module("myApp.controllers", []).controller("loginController", function($scope,$location) {
+  angular.module("myApp.controllers", []).controller("loginController", function($scope,$location,appServices) {
     $scope.message = " ";
     /*$scope.users=["kanika","kanika"];
     function init() {
@@ -23,6 +23,7 @@
 
   $scope.authenticateUsers=function(){
     var response;
+    //call the appServices.authenticate here
     if ($scope.username === "kanika" && $scope.password === "narang") {
                   $location.path('/home');
                 }
