@@ -1,16 +1,38 @@
-(function(){
+(function() {
 
-  var loginController = function($scope,$log,$window,loginfactory){
-    $scope.username="kanika ";
-    $scope.password=" kanika";
-    $scope.success = function() {
-       $window.alert("hii kanika");
-    };
+  angular.module("myApp.controllers", []).controller("loginController", function($scope) {
+    $scope.message = " ";
+    /*$scope.users=["kanika","kanika"];
+    function init() {
+            loginFactory.getUsers()
+                .then(function(response) {
+                    $scope.username = response.data;
+                    $scope.password = response.data;
+                }, function(data, status, headers, config) {
+                    $log.log(data.error + ' ' + status);
+                });
+        }
 
-  }
+        init();
 
-loginController.$inject = ['$scope', '$log','$window','loginFactory'];
+      $scope.authenticateUsers = function(){
+          if($scope.username === "kanika"){
+            $scope.message="hii kanika";
+          }
+        };*/
 
-angular.module('login')
-  .controller('loginController', loginController);
+
+  $scope.authenticateUsers=function(){
+    var response;
+    if ($scope.username === "kanika" && $scope.password === "narang") {
+                  $scope.message = "Welcome Kanika!!"
+                }
+                else{
+                  $scope.message = "You entered wrong credentials!!"
+                }
+
+};
+
+});
+
 }());

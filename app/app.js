@@ -1,6 +1,6 @@
 (function() {
 
-    var app = angular.module('login', ['ngRoute', 'ngAnimate']);
+    var app = angular.module('myApp', ['ngRoute', 'ngAnimate','myApp.controllers']);
 
     app.config(function($routeProvider) {
         $routeProvider
@@ -9,8 +9,8 @@
                 templateUrl: 'app/views/login.html'
             })
             .when('/login', {
-                controller: 'homeController',
-                templateUrl: 'app/views/home.html'
+                controller: 'userHomeController',
+                templateUrl: 'app/views/userHome.html'
             })
 
             .otherwise( { redirectTo: '/' } );
