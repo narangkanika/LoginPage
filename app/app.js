@@ -1,3 +1,4 @@
+
 (function() {
 
     var app = angular.module('myApp', ['ngRoute', 'ngAnimate','myApp.controllers']);
@@ -8,9 +9,9 @@
                 controller: 'loginController',
                 templateUrl: 'app/views/login.html'
             })
-            .when('/login', {
-                controller: 'userHomeController',
-                templateUrl: 'app/views/userHome.html'
+            .when('/home', {
+                controller: 'homeController',
+                templateUrl: 'app/views/home.html'
             })
 
             .otherwise( { redirectTo: '/' } );

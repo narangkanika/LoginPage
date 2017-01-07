@@ -1,6 +1,7 @@
+
 (function() {
 
-  angular.module("myApp.controllers", []).controller("loginController", function($scope) {
+  angular.module("myApp.controllers", []).controller("loginController", function($scope,$location) {
     $scope.message = " ";
     /*$scope.users=["kanika","kanika"];
     function init() {
@@ -12,9 +13,7 @@
                     $log.log(data.error + ' ' + status);
                 });
         }
-
         init();
-
       $scope.authenticateUsers = function(){
           if($scope.username === "kanika"){
             $scope.message="hii kanika";
@@ -25,7 +24,7 @@
   $scope.authenticateUsers=function(){
     var response;
     if ($scope.username === "kanika" && $scope.password === "narang") {
-                  $scope.message = "Welcome Kanika!!"
+                  $location.path('/home');
                 }
                 else{
                   $scope.message = "You entered wrong credentials!!"
