@@ -1,7 +1,7 @@
 
 (function() {
 
-angular.module("myApp.controllers", []).controller("loginController", function($scope,$location,loginService) {
+angular.module("myApp.controllers", []).controller("loginController", function($scope) {
   $scope.message = " ";
 
 
