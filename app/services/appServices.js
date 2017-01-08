@@ -1,20 +1,22 @@
-(function() {
-    var appService = function() {
-    
+
+angular.module('myApp.controllers', [])
+      .service('appServices', function () {
+
+
     //currently hardcoded the values and used them.
        var users= [
 		   {
 			   'username': 'sonali',
 			   'password' : '123'
 		   },
-		   
+
 		   {
 			   'username': 'kanika',
 			   'password' : 'abc'
 		   }
-		   
+
 	   ];
-		
+
     //pass the username & psswrd you recieved via the $http.post() to call the webservice.
     //For http refer your factory and angularjs online documentation
         this.authenticateUser = function(username, psswrd) {
@@ -22,18 +24,17 @@
             for (var i=0,len=users.length;i<len;i++) {
                if (users[i].username === username) {
 				   if(users[i].password === psswrd){
-					   
-				   
+
+
                    return 'true';
 					   }
                }
             }
             return 'false';
         };
-        
-	
+
+
     };
-    
-    angular.module('myApp').service('appService', appService);
-                                           
-}());
+
+
+  });

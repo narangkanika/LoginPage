@@ -1,5 +1,4 @@
 
-(function() {
 
     var app = angular.module('myApp', ['ngRoute', 'ngAnimate','myApp.controllers']);
 
@@ -7,14 +6,12 @@
         $routeProvider
             .when('/', {
                 controller: 'loginController',
-                templateUrl: 'app/views/login.html'
+                templateUrl: '/app/views/login.html'
             })
             .when('/home', {
                 controller: 'userHomeController',
-                templateUrl: 'app/views/userHome.html'
+                templateUrl: '/app/views/userHome.html'
             })
 
             .otherwise( { redirectTo: '/' } );
     });
-
-}());

@@ -2,7 +2,7 @@
 
 var userHomeController = function($scope){
 
-        
+
 
 };
       homeController.$inject = ['$scope'];
@@ -10,4 +10,4 @@ var userHomeController = function($scope){
       angular.module('myApp.controllers')
         .controller('userHomeController', homeController);
 
-  }());
+}());
