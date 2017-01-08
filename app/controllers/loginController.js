@@ -7,7 +7,7 @@ angular.module("myApp.controllers", []).controller("loginController", function($
 
 
 $scope.login=function(){
-  var response;
+  
   $scope.user = loginService.authenticateUser($scope.username,$scope.password);
 
 
