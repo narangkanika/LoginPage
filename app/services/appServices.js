@@ -1,5 +1,5 @@
 
-angular.module('myApp.controllers', [])
+angular.module('myApp', [])
       .service('appServices', function () {
 
 
