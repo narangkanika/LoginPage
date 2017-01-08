@@ -7,7 +7,7 @@ angular.module("myApp.controllers", []).controller("loginController", function($
 
 
 $scope.login=function(){
-  
+
   $scope.user = loginService.authenticateUser($scope.username,$scope.password);
 
 
@@ -37,12 +37,13 @@ $scope.login=function(){
       /* http post method
           ----------------------------------------------*/
       /* $http.post('/login', { username: username, password: password })
-         .then(function successCallback(response) {
-           $location.path('/home');
-           return 'true';
-     }, function errorCallback(response) {
-         return 'false';
-     });
+      .success(function(data, status) {
+     $location.path('/home');
+     return 'true';
+		})
+		.error(function(data, status, headers, config) {
+			return 'false';
+		});
      */
           var len=users.length
           for (var i=0;i<len;i++) {
